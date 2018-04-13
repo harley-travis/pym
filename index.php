@@ -3,10 +3,10 @@
  *
  * The main template file
  *
- * @link https://rizepoint.com
+ * @link https://greatbasinhosting.com
  * @package WordPress
- * @subpackage RizePoint
- * @since RizePoint 1.0
+ * @subpackage Pym
+ * @since Pym 1.0
  *
  */
 get_header(); ?>
