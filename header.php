@@ -35,7 +35,6 @@
 		
 		<!-- css -->
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css">
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/css/font-awesome.min.css">
 		
 		<!-- jquery -->
 		<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery-3.3.2.min.js"></script>
