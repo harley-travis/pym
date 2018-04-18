@@ -9,7 +9,7 @@ PHP<br>
 jQuery 3.3.2<br>
 Bootstrap 4.1<br>
 WordPress<br>
-Node/NPM<br>
+Node/NPM <br>
 Wpsass [https://torquemag.io/2017/06/start-using-sass-wordpress-npm-scripts/]
 
 
