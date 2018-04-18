@@ -1,8 +1,17 @@
 # Pym, Hank Pym 
-WordPress Template
+WordPress Template for private use. 
 
-## Working With SASS. 
-Using wpsass to compile SCSS to CSS. Learn more here: https://torquemag.io/2017/06/start-using-sass-wordpress-npm-scripts/
+## Technologies Used
+HTML5
+CSS3/SASS 
+JavaScript
+PHP
+jQuery 3.3.2
+Bootstrap 4.1
+WordPress
+Node/NPM
+Wpsass [https://torquemag.io/2017/06/start-using-sass-wordpress-npm-scripts/]
+
 
 ## Compile CSS
 npm run css
