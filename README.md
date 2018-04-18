@@ -2,7 +2,7 @@
 WordPress Template for private use. 
 
 ## Technologies Used
-HTML5
+HTML5<br>
 CSS3/SASS 
 JavaScript
 PHP
