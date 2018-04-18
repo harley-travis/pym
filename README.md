@@ -1,7 +1,7 @@
 # Pym, Hank Pym 
 WordPress Template
 
-# Working With SASS. 
+## Working With SASS. 
 Using wpsass to compile SCSS to CSS. Learn more here: https://torquemag.io/2017/06/start-using-sass-wordpress-npm-scripts/
 
 ## Compile CSS
