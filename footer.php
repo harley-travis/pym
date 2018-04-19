@@ -1,5 +1,7 @@
         <footer>
-
+                <div class="container">
+                        <span><?php echo date(Y); ?> &copy; GreatBasinHosting.com | All Rights Reserved.</span>
+                </div>
         </footer>
 
         <!-- scripts -->
