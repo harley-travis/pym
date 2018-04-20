@@ -1,0 +1,87 @@
+header{
+    padding: 15px 0;
+}
+
+section, footer {
+    padding: 35px 0;
+}
+
+.purple-bg {
+    background-color: $purple-1;
+}
+
+.purple-text {
+    color: $purple-1;
+}
+
+.purple-2-bg {
+    background-color: $purple-2;
+}
+
+.purple-2-text {
+    color: $purple-2;
+}
+
+.magenta-bg {
+    background-color: $magenta;
+}
+
+.magenta-text {
+    color: $magenta;
+}
+
+.blue-1-bg {
+    background-color: $blue-1;
+}
+
+.blue-1-text {
+    color: $blue-1;
+}
+
+.blue-2-bg {
+    background-color: $blue-2;
+}
+
+.blue-2-text {
+    color: $blue-2;
+}
+
+.white-bg {
+    background-color: $white;
+}
+
+.white-text {
+    color: $white;
+}
+
+.black-1-bg {
+    background-color: $black-1;
+}
+
+.black-1-text {
+    color: $black-1;
+}
+
+.black-2-bg {
+    background-color: $black-2;
+}
+
+.black-2-text {
+    color: $black-2;
+}
+
+.blue-purple-magenta {
+    background: #3356b5;
+    background: -moz-linear-gradient(-45deg, #3356b5 0%, #5638a8 48%, #9d33b5 100%);
+    background: -webkit-linear-gradient(-45deg, #3356b5 0%,#5638a8 48%,#9d33b5 100%);
+    background: linear-gradient(135deg, #3356b5 0%,#5638a8 48%,#9d33b5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3356b5', endColorstr='#9d33b5',GradientType=1 );
+}
+
+.magenta-purple-blue {
+    background: #9d33b5;
+    background: -moz-linear-gradient(-45deg, #9d33b5 1%, #5638a8 48%, #3356b5 100%);
+    background: -webkit-linear-gradient(-45deg, #9d33b5 1%,#5638a8 48%,#3356b5 100%);
+    background: linear-gradient(135deg, #9d33b5 1%,#5638a8 48%,#3356b5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d33b5', endColorstr='#3356b5',GradientType=1 );
+}
