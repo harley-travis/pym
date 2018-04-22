@@ -34,6 +34,7 @@
 		<meta name="theme-color" content="#FCB040" />
 		
 		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/css/fontawesome/css/fontawesome-all.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css">
 		
 		<!-- jquery -->
@@ -46,3 +47,4 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
+		<?php include 'includes/page-header.php'; ?>

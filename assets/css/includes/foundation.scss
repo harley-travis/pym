@@ -1,3 +1,5 @@
+/* GENERALS */
+
 header{
     padding: 15px 0;
 }
@@ -5,6 +7,9 @@ header{
 section, footer {
     padding: 35px 0;
 }
+
+
+/* COLORS */
 
 .purple-bg {
     background-color: $purple-1;
@@ -70,6 +75,9 @@ section, footer {
     color: $black-2;
 }
 
+
+/* GRAIDENTS */
+
 .blue-purple-magenta {
     background: #3356b5;
     background: -moz-linear-gradient(-45deg, #3356b5 0%, #5638a8 48%, #9d33b5 100%);
@@ -84,4 +92,132 @@ section, footer {
     background: -webkit-linear-gradient(-45deg, #9d33b5 1%,#5638a8 48%,#3356b5 100%);
     background: linear-gradient(135deg, #9d33b5 1%,#5638a8 48%,#3356b5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d33b5', endColorstr='#3356b5',GradientType=1 );
+}
+
+
+/* BUTTONS */
+
+.btn-purple-1{
+    color: $white;
+    background-color: $purple-1;
+    border-color: $purple-1;
+}
+
+.btn-purple-1:hover{
+    color: $white;
+    background-color: darken($purple-1, 10);
+    border-color: darken($purple-1, 10);
+}
+
+.btn-inverse-purple-1{
+    color: $purple-1;
+    border-color: $purple-1;
+	background: transparent;
+}
+
+.btn-inverse-purple-1:hover{
+    color: $white;
+    background-color: $purple-1;
+    border-color: $purple-1;
+    transition: 0.5s ease;
+}
+
+.btn-purple-2{
+    color: $white;
+    background-color: $purple-2;
+    border-color: $purple-2;
+}
+
+.btn-purple-2:hover{
+    color: $white;
+    background-color: darken($purple-2, 10);
+    border-color: darken($purple-2, 10);
+}
+
+.btn-inverse-purple-2{
+    color: $purple-2;
+    border-color: $purple-2;
+	background: transparent;
+}
+
+.btn-inverse-purple-2:hover{
+    color: $white;
+    background-color: $purple-2;
+    border-color: $purple-2;
+    transition: 0.5s ease;
+}
+
+.btn-magenta{
+    color: $white;
+    background-color: $magenta;
+    border-color: $magenta;
+}
+
+.btn-magenta:hover{
+    color: $white;
+    background-color: darken($magenta, 10);
+    border-color: darken($magenta, 10);
+}
+
+.btn-inverse-magenta{
+    color: $magenta;
+    border-color: $magenta;
+	background: transparent;
+}
+
+.btn-inverse-magenta:hover{
+    color: $white;
+    background-color: $magenta;
+    border-color: $magenta;
+    transition: 0.5s ease;
+}
+
+.btn-blue-1{
+    color: $white;
+    background-color: $blue-1;
+    border-color: $blue-1;
+}
+
+.btn-blue-1:hover{
+    color: $white;
+    background-color: darken($blue-1, 10);
+    border-color: darken($blue-1, 10);
+}
+
+.btn-inverse-blue-1{
+    color: $blue-1;
+    border-color: $blue-1;
+	background: transparent;
+}
+
+.btn-inverse-blue-1:hover{
+    color: $white;
+    background-color: $blue-1;
+    border-color: $blue-1;
+    transition: 0.5s ease;
+}
+
+.btn-blue-2{
+    color: $white;
+    background-color: $blue-2;
+    border-color: $blue-2;
+}
+
+.btn-blue-2:hover{
+    color: $white;
+    background-color: darken($blue-2, 10);
+    border-color: darken($blue-2, 10);
+}
+
+.btn-inverse-blue-2{
+    color: $blue-2;
+    border-color: $blue-2;
+	background: transparent;
+}
+
+.btn-inverse-blue-2:hover{
+    color: $white;
+    background-color: $blue-2;
+    border-color: $blue-2;
+    transition: 0.5s ease;
 }
