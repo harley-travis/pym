@@ -22,7 +22,7 @@ get_header(); ?>
 		<div class="row text-center">                    
 			<div class="col-md-3 col-xs-12 product-wrapper">
 				<div class="product-icon-wrapper">
-					<i class="fas fa-camera-retro product-icon"></i>
+					<i class="fas fa-camera-retro service-icon"></i>
 				</div>
 				<div class="product-title">
 					Lorum Ipsum
@@ -33,7 +33,7 @@ get_header(); ?>
 			</div>
 			<div class="col-md-3 col-xs-12 product-wrapper">
 				<div class="product-icon-wrapper">
-					<i class="fas fa-camera-retro product-icon"></i>
+					<i class="fas fa-camera-retro service-icon"></i>
 				</div>
 				<div class="product-title">
 					Lorum Ipsum
@@ -44,7 +44,7 @@ get_header(); ?>
 			</div>
 			<div class="col-md-3 col-xs-12 product-wrapper">
 				<div class="product-icon-wrapper">
-					<i class="fas fa-camera-retro product-icon"></i>
+					<i class="fas fa-camera-retro service-icon"></i>
 				</div>
 				<div class="product-title">
 					Lorum Ipsum
@@ -55,7 +55,7 @@ get_header(); ?>
 			</div>
 			<div class="col-md-3 col-xs-12 product-wrapper">
 				<div class="product-icon-wrapper">
-					<i class="fas fa-camera-retro product-icon"></i>
+					<i class="fas fa-camera-retro service-icon"></i>
 				</div>
 				<div class="product-title">
 					Lorum Ipsum
@@ -71,50 +71,60 @@ get_header(); ?>
 <!-- message -->
 <section id="pricing" class="container-fluid blue-purple-magenta white-text">
 	<div class="container">
-		<div class="row">
-			<div class="text-center">
-				<h3>Cool Fancy Text Generator is a copy and paste font changer that creates</h3>
-			</div>
+		<div class="row d-flex justify-content-center">
+			<span class="cta-strip">Cool Fancy Text Generator is a copy and paste font changer that creates</span>
 		</div>
 	</div>
 </section>
 
 <!-- pricing -->
-<section class="container-fluid gray-1-bg">
+<section class="container-fluid">
 	<div class="container">
-		<div class="row">
+		<div class="row text-center">
 			<div class="card-deck">
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						<h5 class="card-title">Basic</h5>
+						<p class="card-text price text-success">$24.99</p>
+						<span class="pkg-time">per month</span>
 					</div>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Vestibulum at eros</li>
+						<li class="list-group-item">1 Free Email</li>
+						<li class="list-group-item">Unlimited FTP Access</li>
+						<li class="list-group-item">1 Click WordPress Install</li>
+						<li class="list-group-item">5GB Disk Space</li>
+						<li class="list-group-item">10GB Bandwidth</li>
+						<li class="list-group-item">Free Technical Support</li>
 					</ul>
 				</div>
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+						<h5 class="card-title">Plus</h5>
+						<p class="card-text price text-success">$34.99</p>
+						<span class="pkg-time">per month</span>
 					</div>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Vestibulum at eros</li>
+					<li class="list-group-item">1 Free Email</li>
+						<li class="list-group-item">Unlimited FTP Access</li>
+						<li class="list-group-item">1 Click WordPress Install</li>
+						<li class="list-group-item">5GB Disk Space</li>
+						<li class="list-group-item">10GB Bandwidth</li>
+						<li class="list-group-item">Free Technical Support</li>
 					</ul>
 				</div>
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+						<h5 class="card-title">Premium</h5>
+						<p class="card-text price text-success">$44.99</p>
+						<span class="pkg-time">per month</span>
 					</div>
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item">Cras justo odio</li>
-						<li class="list-group-item">Dapibus ac facilisis in</li>
-						<li class="list-group-item">Vestibulum at eros</li>
+						<li class="list-group-item">1 Free Email</li>
+						<li class="list-group-item">Unlimited FTP Access</li>
+						<li class="list-group-item">1 Click WordPress Install</li>
+						<li class="list-group-item">5GB Disk Space</li>
+						<li class="list-group-item">10GB Bandwidth</li>
+						<li class="list-group-item">Free Technical Support</li>
 					</ul>
 				</div>
 			</div>
@@ -124,7 +134,7 @@ get_header(); ?>
 
 <!-- service -->
 <div id="services"></div>
-<section class="container-fluid">
+<section class="container-fluid gray-1-bg">
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-4 col-xs-12 service-wrapper">
@@ -227,18 +237,14 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		<div class="row product-cta">
-			<a href="#" class="btn btn-primary btn-lg">Sign Up Now</a>
-		</div>
 	</div>
 	</section>
 
 	<!-- final CTA -->
-	<section class="container-fluid purple-1-bg white-text">
+	<section class="container-fluid blue1-blue2 white-text">
 	<div class="container">
-		<div class="row ">
-			Do you even know what is happening right now? 
-			<a href="#" class="btn btn-outline-light">Sign Up Now</a>
+		<div class="row d-flex justify-content-center">
+			<span class="cta-strip">Do you even know what is happening right now?</span> <a href="#" class="btn btn-outline-light">Sign Up Now</a>
 		</div>
 	</div>
 </section>

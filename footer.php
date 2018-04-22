@@ -2,7 +2,7 @@
             <div class="container footer-wrapper">
                 <div class="row">
                     <div class="col-md-6 col-xs-12">
-                        <span>&copy; mywesite.com | All Rights Reserved.</span>
+                        <span><?php echo date(Y); ?> &copy; GreatBasinHosting.com | All Rights Reserved.</span>
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <nav>

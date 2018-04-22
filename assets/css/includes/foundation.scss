@@ -11,11 +11,11 @@ section, footer {
 
 /* COLORS */
 
-.purple-bg {
+.purple-1-bg {
     background-color: $purple-1;
 }
 
-.purple-text {
+.purple-1-text {
     color: $purple-1;
 }
 
@@ -75,6 +75,14 @@ section, footer {
     color: $black-2;
 }
 
+.gray-1-bg {
+    background-color: $gray-1;
+}
+
+.gray-1-text {
+    color: $gray-1;
+}
+
 
 /* GRAIDENTS */
 
@@ -92,6 +100,22 @@ section, footer {
     background: -webkit-linear-gradient(-45deg, #9d33b5 1%,#5638a8 48%,#3356b5 100%);
     background: linear-gradient(135deg, #9d33b5 1%,#5638a8 48%,#3356b5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d33b5', endColorstr='#3356b5',GradientType=1 );
+}
+
+.blue1-blue2 {
+    background: #3356b5;
+    background: -moz-linear-gradient(-45deg, #3356b5 1%, #3637bf 100%);
+    background: -webkit-linear-gradient(-45deg, #3356b5 1%,#3637bf 100%);
+    background: linear-gradient(135deg, #3356b5 1%,#3637bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3356b5', endColorstr='#3637bf',GradientType=1 );
+}
+
+.blue2-blue1 {
+    background: #3637bf;
+    background: -moz-linear-gradient(-45deg, #3637bf 0%, #3356b5 100%);
+    background: -webkit-linear-gradient(-45deg, #3637bf 0%,#3356b5 100%);
+    background: linear-gradient(135deg, #3637bf 0%,#3356b5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3637bf', endColorstr='#3356b5',GradientType=1 );
 }
 
 
@@ -220,4 +244,9 @@ section, footer {
     background-color: $blue-2;
     border-color: $blue-2;
     transition: 0.5s ease;
+}
+
+/* TOOLS */
+.margin-center {
+    margin: 0 auto;
 }
