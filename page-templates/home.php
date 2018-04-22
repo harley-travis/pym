@@ -244,7 +244,10 @@ get_header(); ?>
 	<section class="container-fluid blue1-blue2 white-text">
 	<div class="container">
 		<div class="row d-flex justify-content-center">
-			<span class="cta-strip">Do you even know what is happening right now?</span> <a href="#" class="btn btn-outline-light">Sign Up Now</a>
+			<span class="cta-strip">All The Services You Need At Affordable Prices.</span> 
+		</div>
+		<div class="row d-flex justify-content-center cta-btn-wrapper">
+			<a href="#" class="btn btn-outline-light">Sign Up Today</a>
 		</div>
 	</div>
 </section>
@@ -257,8 +260,8 @@ get_header(); ?>
 				<div class="card">
 					<div class="card-body">
 						<blockquote class="blockquote mb-0">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-							<div class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></div>
+							<p>"Great Basin helped me setup my WordPress site so fast! I have never had a problem with their service. I recommend Great Basin to all my Friends."</p>
+							<div class="blockquote-footer">Kevin Harley <cite title="Source Title">Park City Pictures</cite></div>
 						</blockquote>
 					</div>
 				</div>
@@ -267,8 +270,8 @@ get_header(); ?>
 				<div class="card">
 					<div class="card-body">
 						<blockquote class="blockquote mb-0">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-							<div class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></div>
+							<p>"Their servers are always up and running. Their support team always answers my questions promptly. I couldn't be happier. 5 Stars!"</p>
+							<div class="blockquote-footer">Dackota Johnson <cite title="Source Title">East Valley Maids</cite></div>
 						</blockquote>
 					</div>
 				</div>
