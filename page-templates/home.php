@@ -66,18 +66,21 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+	<div id="pricing"></div>
 </section>
 
-<!-- message -->
-<section id="pricing" class="container-fluid blue-purple-magenta white-text">
+<!-- pricing -->
+<section class="container-fluid blue-purple-magenta white-text">
 	<div class="container">
 		<div class="row d-flex justify-content-center">
-			<span class="cta-strip">Cool Fancy Text Generator is a copy and paste font changer that creates</span>
+			<h2>Pricing Made Easy</h2>
+		</div>
+		<div class="row d-flex justify-content-center">
+			<p class="cta-strip">No Contracts. Cancel At Anytime.</p>
 		</div>
 	</div>
 </section>
 
-<!-- pricing -->
 <section class="container-fluid">
 	<div class="container">
 		<div class="row text-center">
@@ -255,6 +258,9 @@ get_header(); ?>
 <!-- testimonials -->
 <section class="container-fluid gray-1-bg">
 	<div class="container">
+		<div class="row d-flex justify-content-center testimony-header">
+			<h4>Don't Just Take Our Word For It</h4>
+		</div>
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="card">
