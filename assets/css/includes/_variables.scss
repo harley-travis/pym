@@ -1,0 +1,20 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,800');
+
+/* fonts */
+$nunito: Nunito Sans, sans-serif;
+
+$text: #000;
+$black: #000;
+$white: #fff;
+$gray: #eee;
+$gray-2: #a2a2a2;
+$gray-3: #F0F0F0;
+$purple: #751BC5;
+
+/* DARKEN COLORS */
+$black-darken: darken($black, 10);
+$white-darken: darken($white, 10);
+$purple-darken: darken($purple, 10);
+
+

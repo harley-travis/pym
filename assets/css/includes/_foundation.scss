@@ -1,0 +1,147 @@
+/* GENERALS */
+
+body {
+	color: $text;
+	font-family: $nunito;
+}
+
+header{
+    padding: 15px 0;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+	font-weight: 800;
+}
+
+h2.section-heading {
+    padding-bottom: 35px;
+}
+
+/*BIG SLIDE */
+.panel {
+    position: fixed;
+    left: -15.625em; /*left or right and the width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+	
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	
+	li {
+		border-bottom: 1px solid $gray;
+		padding: 10px 0 10px 25px;
+	}
+}
+
+.wrap {
+    position: relative;
+}
+
+.bars-icon {
+    font-size: 1.5rem;
+    border: 1px solid $gray;
+    padding: 7px;
+    border-radius: 5px;
+    color: $text;
+}
+
+nav#menu {
+    background: $gray;
+    border-right: 1px solid $gray;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-none {
+	display: none;
+}
+
+.display-none-sm {
+	display: none;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.float-right {
+	float: right;
+	clear: both;
+}
+
+/* BOOTSTRAP OVERRIDES */
+.container-fluid {
+	padding: 0 !important;
+}
+.btn-link {
+	color: $white !important;
+	text-decoration: none !important;
+}
+
+.list-group-item {
+	border: 0 !important;
+}
+
+.card-title {
+    position: absolute;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 2%, rgba(0,0,0,0.65) 99%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+	margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.card-title-text-wrapper {
+    padding: 5px 20px;
+    display: block;
+}
+
+
+//.carousel-control-prev-icon {
+// background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+//}
+//
+//.carousel-control-next-icon {
+//  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+//}
+//
+//.carousel-indicators li {
+//  background-color: #999 !important;
+//  background-color: rgba(70,70,70,.25) !important;
+//}
+//
+//.carousel-indicators .active {
+//  background-color: #444 !important;
+//}
+
+
+/* COLORS */
+.black-bg {
+	background-color: $black;
+}
+
+.white-bg {
+	background-color: $white;
+}
+
+.black-text {
+	color: $black !important;
+}
+
+.white-text {
+	color: $white;
+}
+
+.purple-text {
+	color: $purple;
+}
