@@ -18,26 +18,18 @@
 						
 						<h5 class="filter-heading">industries</h5>
 						<div class="list-group">
-							<?php
-								$categories = get_categories( array(
-									'orderby' => 'name',
-									'order'   => 'ASC'
-								) );
-
-								foreach( $categories as $category ) {
-									$category_link = sprintf( 
-										'<label for="category-'.$category->term_id .'" alt="%2$s" class="list-group-item list-group-item-action">%3$s</label><input type="checkbox" class="category-checkbox" name="category[]" id="category-'.$category->term_id .'" value="'.$category->term_id .'" onclick="
-										+('.$category->term_id .')">',
-										esc_url( get_category_link( $category->term_id ) ),
-										esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
-										esc_html( $category->name )
-									);
-
-									echo sprintf( esc_html__( '%s', 'textdomain' ), $category_link );
-									//echo $category->term_id;
-								}
-							?>
-						</div>
+					
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						</div><!-- list-group -->
 						
 						<h5 class="filter-heading">platforms</h5>
 						<div class="list-group">

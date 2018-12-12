@@ -186,4 +186,80 @@ function my_password_form() {
 }
 add_filter( 'the_password_form', 'my_password_form' );
 
+// filter category functions
+function misha_filter_function(){
+	$args = array(
+		'orderby' => 'date', // we will sort posts by date
+		'order'	=> $_POST['date'] // ASC or DESC
+	);
+ 
+	// for taxonomies / categories
+	if( isset( $_POST['categoryfilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'id',
+				'terms' => $_POST['categoryfilter']
+			)
+		);
+ 
+	// create $args['meta_query'] array if one of the following fields is filled
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'] || isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
+		$args['meta_query'] = array( 'relation'=>'AND' ); // AND means that all conditions of meta_query should be true
+ 
+	// if both minimum price and maximum price are specified we will use BETWEEN comparison
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] && isset( $_POST['price_max'] ) && $_POST['price_max'] ) {
+		$args['meta_query'][] = array(
+			'key' => '_price',
+			'value' => array( $_POST['price_min'], $_POST['price_max'] ),
+			'type' => 'numeric',
+			'compare' => 'between'
+		);
+	} else {
+		// if only min price is set
+		if( isset( $_POST['price_min'] ) && $_POST['price_min'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_min'],
+				'type' => 'numeric',
+				'compare' => '>'
+			);
+ 
+		// if only max price is set
+		if( isset( $_POST['price_max'] ) && $_POST['price_max'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_max'],
+				'type' => 'numeric',
+				'compare' => '<'
+			);
+	}
+ 
+ 
+	// if post thumbnail is set
+	if( isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
+		$args['meta_query'][] = array(
+			'key' => '_thumbnail_id',
+			'compare' => 'EXISTS'
+		);
+ 
+	$query = new WP_Query( $args );
+ 
+	if( $query->have_posts() ) :
+		while( $query->have_posts() ): $query->the_post();
+			echo '<h2><a href="'.$query->post->guid.'">' . $query->post->post_title . '</a></h2>';
+//	print_r( $query->post);
+		endwhile;
+		wp_reset_postdata();
+	else :
+		echo 'No posts found';
+	endif;
+ 
+	die();
+}
+ 
+ 
+add_action('wp_ajax_myfilter', 'misha_filter_function'); 
+add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
+
 ?>
