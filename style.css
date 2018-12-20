@@ -225,6 +225,9 @@ h2.site-title {
 .article-list-wrapper {
   padding: 35px 0; }
 
+.article-card-img {
+  width: 100%; }
+
 .purple-input {
   background-color: #751BC5;
   border: 0 !important; }

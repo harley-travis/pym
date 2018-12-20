@@ -186,6 +186,18 @@ function my_password_form() {
 }
 add_filter( 'the_password_form', 'my_password_form' );
 
+
+// display category chips
+function category_chips($category) {
+	
+	
+	echo category;
+	echo ' holy smoke it worked';
+	
+}
+add_action('wp_ajax_category_chips', 'category_chips'); 
+//add_action('wp_ajax_nopriv_category_chips', 'category_chips');
+
 // filter category functions
 function misha_filter_function(){
 	$args = array(
@@ -195,61 +207,116 @@ function misha_filter_function(){
  
 	// for taxonomies / categories
 	if( isset( $_POST['categoryfilter'] ) )
+
+		// gather all the catogories in an array
+		$category = $_POST['categoryfilter'];
+	
+		//print_r($category); // show me the category ids caught by the form
+
+		// filter by the category ids
 		$args['tax_query'] = array(
 			array(
 				'taxonomy' => 'category',
 				'field' => 'id',
-				'terms' => $_POST['categoryfilter']
+				'terms' => array_values($category),
 			)
 		);
- 
-	// create $args['meta_query'] array if one of the following fields is filled
-	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'] || isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
-		$args['meta_query'] = array( 'relation'=>'AND' ); // AND means that all conditions of meta_query should be true
- 
-	// if both minimum price and maximum price are specified we will use BETWEEN comparison
-	if( isset( $_POST['price_min'] ) && $_POST['price_min'] && isset( $_POST['price_max'] ) && $_POST['price_max'] ) {
-		$args['meta_query'][] = array(
-			'key' => '_price',
-			'value' => array( $_POST['price_min'], $_POST['price_max'] ),
-			'type' => 'numeric',
-			'compare' => 'between'
-		);
-	} else {
-		// if only min price is set
-		if( isset( $_POST['price_min'] ) && $_POST['price_min'] )
-			$args['meta_query'][] = array(
-				'key' => '_price',
-				'value' => $_POST['price_min'],
-				'type' => 'numeric',
-				'compare' => '>'
-			);
- 
-		// if only max price is set
-		if( isset( $_POST['price_max'] ) && $_POST['price_max'] )
-			$args['meta_query'][] = array(
-				'key' => '_price',
-				'value' => $_POST['price_max'],
-				'type' => 'numeric',
-				'compare' => '<'
-			);
-	}
- 
- 
-	// if post thumbnail is set
-	if( isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
-		$args['meta_query'][] = array(
-			'key' => '_thumbnail_id',
-			'compare' => 'EXISTS'
-		);
- 
+	
+		//print_r(array_values($category));
+			
+	// create a query
 	$query = new WP_Query( $args );
  
 	if( $query->have_posts() ) :
 		while( $query->have_posts() ): $query->the_post();
-			echo '<h2><a href="'.$query->post->guid.'">' . $query->post->post_title . '</a></h2>';
-//	print_r( $query->post);
+	
+//			echo 
+//				'<div class="article-card">
+//					<a href="'.$query->post->guid.'">
+//					<img src="'.get_the_post_thumbnail_url(get_the_ID(),'full').'" class="article-card-img" alt="'.$query->post->post_title.'">
+//						<div class="">
+//							<span class="">
+//								<span class="">
+//									<h5>'.$query->post->post_title.'</h5>
+//								</span>
+//							</span>
+//						</div>
+//					</a>
+//				</div>';
+	
+	
+	//print_r($query);
+	
+		//echo $query->the_post;
+		//$category =  wp_get_post_categories($query->post->ID);
+		$category_detail =  get_the_category($query->post->ID);
+
+	// I THINK WE CAN TRASH THIS CAT LOOP
+//		foreach($category_detail as $cd){
+//			$category_obj = $cd->cat_name;
+//		}
+		//$category_name = json_encode(array("categories" => $category));
+
+		$data = array(
+			'url' => $query->post->guid,
+			'image' => get_the_post_thumbnail_url(get_the_ID(),'full'),
+			'title' => $query->post->post_title,
+			'id' => $query->post->ID,
+			'category' => $category_detail[0]->cat_name,
+		);
+	
+		//print_r($data);
+	
+	
+		// set empty array
+		$dcounts = array();
+
+		// loop through each dataset and add to array
+		foreach ($data as $row) {
+			
+			//echo $row->url;
+			
+			$dcounts[] = $row;
+			
+		}
+	
+		//print_r($dcounts);
+	
+	
+	
+		//	$dcountjson = json_encode($dcounts, JSON_PRETTY_PRINT);
+		//	print_r($dcountjson);
+		//
+		//	echo $dcountjson;
+	
+	
+	
+
+	
+	// LEFT OFF
+	// need to figure a way to return the data on the samne page in json format 
+	// or another way to capture the category information
+	//
+	//
+	// left to do
+	// -----------------------
+	// finish CSS
+	// get slider.js working properly
+	// chips and functionality
+	// mobile nav visible
+
+	
+	
+		echo json_encode($data, JSON_PRETTY_PRINT);
+		//echo json_encode($dcounts, JSON_PRETTY_PRINT);
+
+	
+		//print_r($query);
 		endwhile;
+	
+		// send these categories to the chips
+		//$this->category_chips($category);
+	
 		wp_reset_postdata();
 	else :
 		echo 'No posts found';

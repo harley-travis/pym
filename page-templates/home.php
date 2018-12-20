@@ -14,9 +14,7 @@ get_header(); ?>
 				</button> 
 			</span>
 			<ul class="filter-list">
-				
-<div id="response"></div>	
-
+				<li id="categories"></li>
 			</ul>
 		</div>
 	</div>
@@ -43,29 +41,37 @@ get_header(); ?>
 		</div>
 	</div>
 	<div class="mahesh-wrapper">
-			<img src="<?php echo ROOT.'assets/img/mahesh.jpg'; ?>" class="mahesh-img" alt="">
-		</div>
+		<img src="<?php echo ROOT.'assets/img/mahesh.jpg'; ?>" class="mahesh-img" alt="">
+	</div>
 </section>
-							<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-								<?php
-									if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
-										echo '<select name="categoryfilter"><option>Select category...</option>';
-										foreach ( $terms as $term ) :
-											echo '<option value="' . $term->term_id . '">' . $term->name . '</option>'; // ID of the category as the value of an option
-										endforeach;
-										echo '</select>';
-									endif;
-								?>
-								
-								<button>Apply filter</button>
-								<input type="hidden" name="action" value="myfilter">
-							</form>
-									
+
+
+
+
+
+
 
 <section class="container-fluid article-list">
 	<div class="container article-list-wrapper">
 	
 		<!-- http://kenwheeler.github.io/slick/ -->
+		<div class="slider">
+			<div id="response"></div>	
+			
+			
+			
+			<?php echo do_shortcode( '[searchandfilter id="38" show="results"]' ); ?>
+			
+			
+			
+<!--
+			<div id="post-response"></div>
+			
+-->
+			
+			
+		</div>
+		
 	</div>
 </section>
 
